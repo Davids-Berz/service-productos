@@ -2,6 +2,7 @@ package com.ms.productos.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,8 @@ import com.ms.productos.models.service.IProductoService;
 
 @RestController
 public class ProductoController {
-    
+
+    @Autowired
     private IProductoService productoService;
 
     @GetMapping("/listar")
@@ -19,7 +21,7 @@ public class ProductoController {
         return productoService.findAll();
     }
 
-    @GetMapping("/listar/{id}")
+    @GetMapping("/ver/{id}")
     public Producto detalle(@PathVariable Long id) {
         return productoService.findById(id);
     }
