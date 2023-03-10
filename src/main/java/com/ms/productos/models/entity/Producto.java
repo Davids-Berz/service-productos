@@ -34,7 +34,7 @@ public class Producto implements Serializable {
     private Date date;
 
     @Transient // no es persistente- no esta mapeado a ningun campo
-    private Integer port;
+    private String port;
 
     public Long getId() {
         return id;
@@ -68,11 +68,11 @@ public class Producto implements Serializable {
         this.date = date;
     }
 
-    public Integer getPort() {
+    public String getPort() {
         return port;
     }
 
-    public void setPort(Integer port) {
+    public void setPort(String port) {
         this.port = port;
     }
 }
