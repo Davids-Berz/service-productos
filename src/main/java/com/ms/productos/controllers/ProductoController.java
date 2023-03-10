@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ms.productos.models.entity.Producto;
 import com.ms.productos.models.service.IProductoService;
 
-@RestController
+@RestController("/api/productos")
 public class ProductoController {
 
     @Autowired
